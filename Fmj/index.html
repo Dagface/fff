@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--适配-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--页面名称-->
+    <title>Swim Wear</title>
+    <!--页面logo-->
+    <link rel="icon" href="images/icon.png">
+    <!--引用文件-->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/pinterest_grid.js"></script>
+    <script src="http://libs.useso.com/js/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<style type="text/css">
+    #gallery-wrapper {
+        position: relative;
+        max-width: 75%;
+        width: 75%;
+        margin: 50px auto;
+    }
+    
+    img.thumb {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .white-panel {
+        position: absolute;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+        padding: 10px;
+    }
+    
+    .white-panel h1 {
+        font-size: 1em;
+    }
+    
+    .white-panel h1 a {
+        color: #A92733;
+    }
+    
+    .white-panel:hover {
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+        margin-top: -5px;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .main1 {
+        background-color: white;
+        width: 100px;
+        height: 150px;
+        font-weight: bolder;
+        text-align: center;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    
+    .main2 {
+        width: 100px;
+        height: 20px;
+    }
+    
+    .main3 {
+        width: 100px;
+        height: 128px;
+    }
+</style>
+
+<body>
+
+    <!--page1-->
+
+    <div data-role="page" id="page1">
+        <!--head-->
+        <div data-role="header" data-theme="a" data-position="fixed">
+            <form method="post" action="demoform.asp">
+                <div data-role="fieldcontain">
+                    <input type="search" name="search" id="search" placeholder="商品搜索">
+                </div>
+            </form>
+        </div>
+        <!--main-->
+        <section id="gallery-wrapper">
+            <article class="white-panel">
+                <img src="images/1.png" class="thumb">
+                <h1><a href="#">居家</a></h1>
+                <p>回家，放松身心</p>
+            </article>
+            <article class="white-panel">
+                <img src="images/2.png" class="thumb">
+                <h1><a href="#">餐厨</a></h1>
+                <p>爱，囿于厨房</p>
+            </article>
+            <article class="white-panel">
+                <img src="images/3.png" class="thumb">
+                <h1><a href="#">配件</a></h1>
+                <p>配角，亦是主角</p>
+            </article>
+            <article class="white-panel">
+                <img src="images/4.png" class="thumb">
+                <h1><a href="#">服装</a></h1>
+                <p>贴身的，要亲肤</p>
+            </article>
+            <article class="white-panel">
+                <img src="images/5.png" class="thumb">
+                <h1><a href="#">洗护</a></h1>
+                <p>亲肤之物，严选天然</p>
+            </article>
+            <article class="white-panel">
+                <img src="images/6.png" class="thumb">
+                <h1><a href="#">婴童</a></h1>
+                <p>爱，从心开始</p>
+            </article>
+            <article class="white-panel">
+                <img src="images/7.png" class="thumb">
+                <h1><a href="#">杂货</a></h1>
+                <p>解忧，每个烦恼</p>
+            </article>
+            <article class="white-panel">
+                <img src="images/8.png" class="thumb">
+                <h1><a href="#">饮食</a></h1>
+                <p>好吃，无添加</p>
+            </article>
+            <article class="white-panel">
+                <img src="images/9.png" class="thumb">
+                <h1><a href="#">其他</a></h1>
+                <p>挑选，你的生活</p>
+            </article>
+        </section>
+        <!--foot-->
+        <div data-role="footer" style="overflow:hidden" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#page1" data-icon="home" data-theme="b">首页
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page2" data-icon="grid" data-theme="b">分类
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page3" data-icon="info" data-theme="b">我的
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--page2-->
+
+    <div data-role="page" id="page2">
+        <!--head-->
+        <div data-role="header" data-theme="a" data-position="fixed">
+            <h1>分类</h1>
+        </div>
+        <!--main-->
+        <div data-role="content">
+            <div data-role="collapsible">
+                <h1>居家</h1>
+                <ul data-role="listview">
+                    <li>
+                        <a href="#pagefalse" data-transition="none">床品</a>
+                    </li>
+                    <li>
+                        <a href="#pagefalse" data-transition="none">家具</a>
+                    </li>
+                    <li>
+                        <a href="#pagefalse" data-transition="none">装饰</a>
+                    </li>
+                </ul>
+            </div>
+            <div data-role="collapsible">
+                <h1>餐厨</h1>
+                <ul data-role="listview">
+                    <li>
+                        <a href="#pagefalse" data-transition="none">锅具</a>
+                    </li>
+                    <li>
+                        <a href="#pagefalse" data-transition="none">厨具</a>
+                    </li>
+                    <li>
+                        <a href="#pagefalse" data-transition="none">餐具</a>
+                    </li>
+                </ul>
+            </div>
+            <div data-role="collapsible">
+                <h1>配件</h1>
+                <ul data-role="listview">
+                    <li>
+                        <a href="#pagefalse" data-transition="none">箱包</a>
+                    </li>
+                    <li>
+                        <a href="#pagefalse" data-transition="none">鞋靴</a>
+                    </li>
+                    <li>
+                        <a href="#pagefalse" data-transition="none">围巾</a>
+                    </li>
+                </ul>
+            </div>
+            <div data-role="collapsible">
+                <h1>服装</h1>
+                <ul data-role="listview">
+                    <li>
+                        <a href="#pagefalse" data-transition="none">男装</a>
+                    </li>
+                    <li>
+                        <a href="#pagefalse" data-transition="none">女装</a>
+                    </li>
+                    <li>
+                        <a href="#pagefalse" data-transition="none">童装</a>
+                    </li>
+                </ul>
+            </div>
+            <div data-role="collapsible">
+                <h1>洗护</h1>
+                <ul data-role="listview">
+                    <li>
+                        <a href="#pagefalse" data-transition="none">用具</a>
+                    </li>
+                    <li>
+                        <a href="#pagefalse" data-transition="none">护肤</a>
+                    </li>
+                    <li>
+                        <a href="#pagefalse" data-transition="none">洗浴</a>
+                    </li>
+                </ul>
+            </div>
+            <div data-role="collapsible">
+                <h1>婴童</h1>
+                <ul data-role="listview">
+                    <li>
+                        <a href="#pagefalse" data-transition="none">妈咪</a>
+                    </li>
+                    <li>
+                        <a href="#pagefalse" data-transition="none">宝贝</a>
+                    </li>
+                    <li>
+                        <a href="#pagefalse" data-transition="none">玩具</a>
+                    </li>
+                </ul>
+            </div>
+            <div data-role="collapsible">
+                <h1>杂货</h1>
+                <ul data-role="listview">
+                    <li>
+                        <a href="#pagefalse" data-transition="none">文具</a>
+                    </li>
+                    <li>
+                        <a href="#pagefalse" data-transition="none">出行</a>
+                    </li>
+                    <li>
+                        <a href="#pagefalse" data-transition="none">收纳</a>
+                    </li>
+                </ul>
+            </div>
+            <div data-role="collapsible">
+                <h1>饮食</h1>
+                <ul data-role="listview">
+                    <li>
+                        <a href="#pagefalse" data-transition="none">搞点</a>
+                    </li>
+                    <li>
+                        <a href="#pagefalse" data-transition="none">冲饮</a>
+                    </li>
+                    <li>
+                        <a href="#pagefalse" data-transition="none">食材</a>
+                    </li>
+                </ul>
+            </div>
+            <div data-role="collapsible">
+                <h1>其他</h1>
+                <ul data-role="listview">
+                    <li>
+                        <a href="#pagefalse" data-transition="none">宠物</a>
+                    </li>
+                    <li>
+                        <a href="#pagefalse" data-transition="none">户外</a>
+                    </li>
+                    <li>
+                        <a href="#pagefalse" data-transition="none">专题</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--foot-->
+        <div data-role="footer" style="overflow:hidden" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#page1" data-icon="home" data-theme="b">首页
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page2" data-icon="grid" data-theme="b">分类
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page3" data-icon="info" data-theme="b">我的
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--page3-->
+
+    <div data-role="page" id="page3">
+        <div data-role="header" data-theme="a" data-position="fixed">
+            <h1>我的</h1>
+        </div>
+        <div data-role="content">
+            <a href="" data-transition="none">
+            </a>
+        </div>
+        <div data-role="footer" style="overflow:hidden" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#page1" data-icon="home" data-theme="b">首页
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page2" data-icon="grid" data-theme="b">分类
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page3" data-icon="info" data-theme="b">我的
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')
+    </script>
+    <script src="js/pinterest_grid.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#gallery-wrapper").pinterest_grid({
+                no_columns: 4,
+                padding_x: 10,
+                padding_y: 10,
+                margin_bottom: 50,
+                single_column_breakpoint: 700
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
